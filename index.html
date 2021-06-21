@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 
 <style>
-    header {
+    header, footer {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     #search-box {
@@ -14,17 +22,30 @@
         border-style: solid;
         outline: none;
     }
-    
+
+    .left {
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+    }
+
+    .right {
+        display: flex;
+        justify-content: right;
+        flex-direction: row;
+    }
+/*
+    #about, #store {
+        align-self: flex-start;
+    }
+
+    #images, .material-icons-round, #sign-in {
+        align-self: flex-end;
+    }
+*/    
     #search-box:hover {
         box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
         border-color: rgba(223,225,229,0);
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .search-buttons {
@@ -41,21 +62,32 @@
     </head>
 <body> 
     <header>
-        <div class="left-header">
-            About
-            Store
-            Gmail
-            Images
+        <div class="left">
+            <div id="about">
+                About
+            </div>
+            <div id="store">
+                Store
+            </div>
+        </div>
+        <div class="right">
+            <div id="gmail">
+                Gmail
+            </div>
+            <div id="images">
+                Images
+            </div>
             <span class="material-icons-round">
                 apps
             </span>
-            <button type="submit">
+            <button type="submit" id="sign-in">
                 Sign In
             </buttonS>
         </div>
     </header>
     <form>
         <img src="/images/googlelogo_color_272x92dp.png"><br>
+        <i class="fa fa-search searchIcon"></i>
         <input id="search-box" type="text">
         <span class="material-icons-round">
             search
@@ -73,14 +105,17 @@
         </div>
     </form>
     <footer>
+        <div class="left">
             Advertising
             Business
             How Search Works
+        </div>
+        <div class="right">
             Privacy
             Terms
             Settings
+        </div>
     </footer>
-   
 </body>    
 
 
