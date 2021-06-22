@@ -43,15 +43,16 @@
         flex-direction: row;
         align-items: flex-end;
     }
-/*
-    #about, #store {
-        align-self: flex-start;
-    }
 
-    #images, .material-icons-round, #sign-in {
+    .links, #apps-icon, #sign-in {
+        margin: 10px;
         align-self: flex-end;
     }
-*/    
+
+    .links:hover {
+        text-decoration: underline;
+    }
+   
     #search-box:hover {
         box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
         border-color: rgba(223,225,229,0);
@@ -72,21 +73,21 @@
 <body> 
     <header>
         <div class="left">
-            <div id="about">
+            <div id="about" class="links">
                 About
             </div>
-            <div id="store">
+            <div id="store" class="links">
                 Store
             </div>
         </div>
         <div class="right">
-            <div id="gmail">
+            <div id="gmail" class="links">
                 Gmail
             </div>
-            <div id="images">
+            <div id="images" class="links">
                 Images
             </div>
-            <span class="material-icons-round">
+            <span class="material-icons-round" id="apps-icon">
                 apps
             </span>
             <button type="submit" id="sign-in">
@@ -115,14 +116,26 @@
     </form>
     <footer>
         <div class="left">
-            Advertising
-            Business
-            How Search Works
+            <div id="advertising" class="links">
+                Advertising
+            </div>
+            <div id="business" class="links">
+                Business
+            </div>
+            <div id="how-search-works" class="links">
+                How Search Works
+            </div>
         </div>
         <div class="right">
-            Privacy
-            Terms
-            Settings
+            <div id="privacy" class="links">
+                Privacy
+            </div>
+            <div id="terms" class="links">
+                Terms
+            </div>
+            <div id="settings" class="links">
+                Settings
+            </div>
         </div>
     </footer>
 </body>    
