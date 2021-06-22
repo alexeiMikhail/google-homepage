@@ -34,6 +34,13 @@
         outline: none;
     }
 
+    .icons {
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        margin: -30px;
+    }
+
     .left {
         display: flex;
         justify-content: left;
@@ -64,6 +71,7 @@
 
     .search-buttons {
         flex-direction: row;
+        margin: 50px;
     }
 
 </style>
@@ -102,11 +110,13 @@
     <form>
         <img src="/images/googlelogo_color_272x92dp.png"><br>
         <input id="search-box" type="text">
-        <span class="material-icons-round">
-            search
-        </span>
-        <span class="material-icons-round">
-            mic
+        <div class="icons">
+            <span class="material-icons-round">
+                search
+            </span>
+            <span class="material-icons-round">
+                mic
+        </div>
         </span>
         <div class="search-buttons">
             <button type="submit">
